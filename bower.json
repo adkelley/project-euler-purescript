@@ -1,0 +1,18 @@
+{
+  "name": "euler",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-console": "^2.0.0",
+    "purescript-lists": "^2.0.0",
+    "purescript-foldable-traversable": "^2.1.0",
+    "purescript-eff": "^2.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^2.0.0"
+  }
+}
