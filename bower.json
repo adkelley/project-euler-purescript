@@ -8,11 +8,14 @@
   ],
   "dependencies": {
     "purescript-console": "^2.0.0",
-    "purescript-lists": "^2.0.0",
-    "purescript-foldable-traversable": "^2.1.0",
-    "purescript-eff": "^2.0.0"
+    "purescript-arrays": "^3.2.0",
+    "purescript-integers": "^2.1.0",
+    "purescript-lists": "^3.4.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^2.0.0"
+  },
+  "resolutions": {
+    "purescript-lists": "^3.0.0"
   }
 }

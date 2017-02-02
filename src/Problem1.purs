@@ -3,15 +3,11 @@ module Problem1 (
   where
 
 import Prelude
-
 import Data.List (List, range, filter)
-import Data.Foldable (sum)
 
-ns :: List Int
-ns = range 0 999
+multiples :: Int -> Int -> Int -> Boolean
+multiples m1 m2 x =
+  mod x m1 == 0 || mod x m2 == 0
 
-multiples :: Int -> Int -> List Int
-multiples m1 m2 = filter (\n -> mod n m1 == 0 || mod n m2 == 0) ns
-
-solution1 :: Int
-solution1 = sum $ multiples 3 5
+solution1 :: List Int
+solution1 = filter (multiples 3 5) (range 1 999)
