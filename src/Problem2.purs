@@ -16,7 +16,7 @@ lazyFibList :: Int -> Int -> List Int
 lazyFibList f1 f2 = lazyCons f1 (defer \_ -> lazyFibList f2 (f1 + f2))
 
 strictFibList :: Int -> List Int
-strictFibList max = takeWhile (\x -> x < max) $ (lazyFibList 1 1)
+strictFibList max = takeWhile (\x -> x < max) $ (lazyFibList 1 2)
 
-solution2 :: Int
-solution2 = sum $ filter even $ toUnfoldable $ strictFibList 4000000
+solution2 :: Int -> Int
+solution2 max = sum $ filter even $ toUnfoldable $ strictFibList max

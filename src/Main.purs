@@ -8,5 +8,5 @@ import Problem2 (solution2)
 
 main :: forall e. Eff (console :: CONSOLE | e) Unit
 main = do
-  log $ show solution1
-  log $ show solution2
+  log $ show (solution1 999)
+  log $ show (solution2 4000000)
