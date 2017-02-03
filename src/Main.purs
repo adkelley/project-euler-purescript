@@ -3,10 +3,16 @@ module Main where
 import Prelude
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Console (CONSOLE, log)
+-- import Data.BigInt (fromInt)
+
 import Problem1 (solution1)
 import Problem2 (solution2)
+import Problem3 (solution3)
+import Problem4 (solution4)
 
 main :: forall e. Eff (console :: CONSOLE | e) Unit
 main = do
-  log $ show (solution1 999)
-  log $ show (solution2 4000000)
+  log $ "Problem 1: " <> show (solution1 999)
+  log $ "Problem 2: " <> show (solution2 4000000)
+  log $ "Problem 3: " <> show (solution3 500)
+  log $ "Problem 4: " <> show (solution4 100)
