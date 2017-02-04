@@ -14,5 +14,5 @@ main :: forall e. Eff (console :: CONSOLE | e) Unit
 main = do
   log $ "Problem 1: " <> show (solution1 999)
   log $ "Problem 2: " <> show (solution2 4000000)
-  log $ "Problem 3: " <> show (solution3 500)
+  log $ "Problem 3: " <> show (solution3 13195)
   log $ "Problem 4: " <> show (solution4 100)

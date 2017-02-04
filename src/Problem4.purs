@@ -1,17 +1,20 @@
 module Problem4 (solution4) where
 
+-- Largest palindrome product for the product of two n-digit numbers
+-- https://projecteuler.net/problem=4
+
 import Prelude
-import Data.Array (concatMap, filter, reverse, (..))
+import Data.Array (filter, reverse, (..))
 import Data.String (fromCharArray, toCharArray)
 import Partial.Unsafe (unsafePartial)
 import Data.Maybe (fromJust)
 import Data.Foldable (maximum)
 
 product :: Int -> Int -> Array Int
-product min max =
-  concatMap (\i ->
-      map (\j -> i * j) (min .. max)
-  ) (min .. max)
+product min max = do
+  a <- min .. max
+  b <- min .. max
+  pure $ a * b
 
 reverseString :: String -> String
 reverseString =  fromCharArray <<< reverse <<< toCharArray
