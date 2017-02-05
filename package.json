@@ -11,10 +11,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "pulp --watch --else 'say bug' test",
+    "test": "pulp test",
+    "install": "bower i",
     "build": "pulp build",
     "watch": "pulp --watch --then 'pulp run' --else 'say bug' build",
-    "exe": "pulp build && pulp run",
+    "start": "pulp build && pulp run",
     "repl": "pulp psci"
   },
   "repository": {
