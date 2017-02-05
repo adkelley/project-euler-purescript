@@ -8,12 +8,12 @@
     "test": "test"
   },
   "dependencies": {
-    "big-integer": "^1.6.17"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "pulp --watch --else 'say bug' test",
     "build": "pulp build",
+    "watch": "pulp --watch --then 'pulp run' --else 'say bug' build",
     "exe": "pulp build && pulp run",
     "repl": "pulp psci"
   },

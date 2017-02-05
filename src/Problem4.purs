@@ -1,4 +1,4 @@
-module Problem4 (solution4) where
+module Problem4 (solution) where
 
 -- Largest palindrome product for the product of two n-digit numbers
 -- https://projecteuler.net/problem=4
@@ -27,6 +27,6 @@ isPalindrome x =
 palindromes :: Array Int -> Array Int
 palindromes = filter isPalindrome
 
-solution4 :: Int -> Int
-solution4 n =
+solution :: Int -> Int
+solution n =
     unsafePartial $ fromJust $ maximum $ palindromes $ product n (n * 10 - 1)

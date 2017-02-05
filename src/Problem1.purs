@@ -1,5 +1,5 @@
 module Problem1 (
-  solution1)
+  solution)
   where
 
 import Prelude
@@ -10,5 +10,5 @@ multiples :: Int -> Int -> Int -> Boolean
 multiples m1 m2 x =
   mod x m1 == 0 || mod x m2 == 0
 
-solution1 :: Int -> Int
-solution1 max = sum $ filter (multiples 3 5) (range 1 max)
+solution :: Int -> Int
+solution max = sum $ filter (multiples 3 5) (range 1 max)

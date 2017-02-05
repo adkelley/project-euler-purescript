@@ -1,5 +1,5 @@
 module Problem3 (
-  solution3, primeFactors
+  solution, primeFactors
   ) where
 
 -- Largest Prime Factor
@@ -22,5 +22,5 @@ primeFactors max = go max 3.0 [] where
    | ((==) (remainder n' z) 0.0) = go ((/) n' z) z (cons z pf)
    | otherwise = go n' ((+) z 2.0) pf
 
-solution3 :: Number -> Number
-solution3 n = unsafePartial $ fromJust $ head (primeFactors n)
+solution :: Number -> Number
+solution n = unsafePartial $ fromJust $ head (primeFactors n)

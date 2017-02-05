@@ -1,5 +1,5 @@
 module Problem2
-  (solution2
+  (solution
     ) where
 
 import Prelude
@@ -18,5 +18,5 @@ lazyFibList f1 f2 = lazyCons f1 (defer \_ -> lazyFibList f2 (f1 + f2))
 strictFibList :: Int -> List Int
 strictFibList max = takeWhile (\x -> x < max) $ (lazyFibList 1 2)
 
-solution2 :: Int -> Int
-solution2 max = sum $ filter even $ toUnfoldable $ strictFibList max
+solution :: Int -> Int
+solution max = sum $ filter even $ toUnfoldable $ strictFibList max
