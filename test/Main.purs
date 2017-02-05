@@ -29,4 +29,4 @@ main = runTest do
   test "problem 4" do
     Assert.assert "The largest palindrome of the product of two 2-digits numbers should be 9009" $ (P4.solution 10) == 9009
   test "problem 5" do
-    Assert.assert "The smallest number divided numbers from 1 to 10 without any remainder should be 0" $ (P5.solution 10) == 2520
+    Assert.assert "The smallest multiple of numbers from 1 to 10 should be 2520" $ (P5.solution 10) == 2520
