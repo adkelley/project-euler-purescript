@@ -1,0 +1,35 @@
+{
+  "name": "project-euler-purescript",
+  "version": "0.1.0",
+  "description": "Solving the euler problems using purescript.  See https://projecteuler.net/about",
+  "main": "index.js",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "big-integer": "^1.6.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pulp build",
+    "exe": "pulp build && pulp run",
+    "repl": "pulp psci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adkelley/project-euler-purescript.git"
+  },
+  "keywords": [
+    "project",
+    "euler",
+    "purescript"
+  ],
+  "author": "Alex Kelley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adkelley/project-euler-purescript/issues"
+  },
+  "homepage": "https://github.com/adkelley/project-euler-purescript#readme"
+}
