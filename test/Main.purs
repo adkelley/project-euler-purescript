@@ -22,7 +22,7 @@ import Problem6 (solution) as P6
 main :: forall e. Eff (console :: CONSOLE, testOutput :: TESTOUTPUT, avar :: AVAR | e) Unit
 main = runTest do
   test "problem 6" do
-    Assert.assert "The Sum square difference of the first 10 natural numbers shoudl be" $ (P6.solution 10) == 2640
+    Assert.assert "The Sum square difference of the first 10 natural numbers shoudld be 2640" $ (P6.solution 10) == 2640
   test "problem 5" do
     Assert.assert "The smallest multiple of numbers from 1 to 10 should be 2520" $ (P5.solution 10) == 2520
   test "problem 4" do

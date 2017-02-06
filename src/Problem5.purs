@@ -8,7 +8,7 @@ import Prelude
 isEvenlyDivisible :: Int -> Int -> Int -> Boolean
 isEvenlyDivisible rangeMin rangeMax dividend = go rangeMin where
   go divisor
-    | ((>) divisor rangeMax) = true
+    | (>) divisor rangeMax = true
     | not ((==) (mod dividend divisor) 0) = false
     | otherwise = go ((+) divisor 1)
 
@@ -18,7 +18,7 @@ isEvenlyDivisible rangeMin rangeMax dividend = go rangeMin where
 
 smallestMultiple :: Int -> Int -> Int
 smallestMultiple rangeMin rangeMax = go ((+) rangeMax 2) where
-  go x = if (isEvenlyDivisible rangeMin rangeMax x)
+  go x = if isEvenlyDivisible rangeMin rangeMax x
          then x
          else go ((+) x 2)
 
@@ -28,6 +28,6 @@ smallestMultiple rangeMin rangeMax = go ((+) rangeMax 2) where
 
 solution :: Int -> Int
 solution rangeMax =
-  if (rangeMax > 10)
+  if (>) rangeMax 10
   then smallestMultiple (rangeMax - 9) rangeMax
   else smallestMultiple 2 rangeMax
