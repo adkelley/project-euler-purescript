@@ -9,9 +9,11 @@ import Problem3 (solution) as P3
 import Problem4 (solution) as P4
 import Problem5 (solution) as P5
 import Problem6 (solution) as P6
+import Problem7 (solution) as P7
 
 main :: forall e. Eff (console :: CONSOLE | e) Unit
 main = do
+  log $ "Problem 7: " <> show (P7.solution 10001)
   log $ "Problem 6: " <> show (P6.solution 100)
   log $ "Problem 5: " <> show (P5.solution 20)
   log $ "Problem 4: " <> show (P4.solution 100)

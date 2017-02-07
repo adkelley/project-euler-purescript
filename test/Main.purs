@@ -17,10 +17,13 @@ import Problem3 (solution) as P3
 import Problem4 (solution) as P4
 import Problem5 (solution) as P5
 import Problem6 (solution) as P6
+import Problem7 (solution) as P7
 
 
 main :: forall e. Eff (console :: CONSOLE, testOutput :: TESTOUTPUT, avar :: AVAR | e) Unit
 main = runTest do
+  test "problem 7" do
+    Assert.assert "The sixth prime number is 13" $ (P7.solution 6) == 13
   test "problem 6" do
     Assert.assert "The Sum square difference of the first 10 natural numbers shoudld be 2640" $ (P6.solution 10) == 2640
   test "problem 5" do
