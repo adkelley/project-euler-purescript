@@ -8,8 +8,7 @@ module Problem3 (
 -- import Data.BigInt (fromString)
 import Data.Array (cons, head)
 import Data.Boolean (otherwise)
-import Data.Maybe (fromJust)
-import Partial.Unsafe (unsafePartial)
+import Data.Maybe (fromMaybe)
 import Math (remainder)
 import Prelude (($), (*), (==), (>), (+), (/))
 
@@ -23,4 +22,4 @@ primeFactors max = go max 3.0 [] where
    | otherwise = go n ((+) z 2.0) pf
 
 solution :: Number -> Number
-solution n = unsafePartial $ fromJust $ head (primeFactors n)
+solution n = fromMaybe 0.0 $ head (primeFactors n)

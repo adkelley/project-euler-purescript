@@ -7,15 +7,15 @@ import Prelude
 isPrime :: Int -> Boolean
 isPrime num = go 2 where
   go i
-    | (==) i 6 = true
-    | (==) (mod num i) 0 = false
+    | eq i 6 = true
+    | eq (mod num i) 0 = false
     | otherwise = go (i + 1)
 
 -- starting from the 4th prime
 nthPrimeFactor :: Int -> Int
 nthPrimeFactor nth = go 4 8 7 where
   go n z prime
-    | (==) n nth = prime
+    | eq n nth = prime
     | isPrime z = go (n + 1) (z + 1) z
     | otherwise = go n (z + 1) prime
 

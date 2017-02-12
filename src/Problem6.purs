@@ -1,24 +1,16 @@
-module Problem6 (solution, squareSum, sumSquares) where
+module Problem6 (solution) where
 
-import Prelude ((==), (-), (+), (*))
+import Prelude ((-), (+), (*), ($), map)
+import Data.Array ((..))
+import Data.Foldable (foldr)
 
-
-squareSum :: Int -> Int
-squareSum nat = go nat 0 where
-  go n acc =
-    if (==) n 0
-    then (*) acc acc
-    else go ((-) n 1)  ((+) acc n)
-
-sumSquares :: Int -> Int
-sumSquares nat = go nat 0 where
-  go n acc =
-    if (==) n 0
-    then acc
-    else go ((-) n 1) ((+) acc ((*) n n))
 
 sumSquareDifference :: Int -> Int
-sumSquareDifference nat = squareSum nat - sumSquares nat
+sumSquareDifference max = sum1 * sum1 - sum2
+  where
+    range = 1 .. max
+    sum1 = foldr (+) 0 range
+    sum2 = foldr (+) 0 $ (map (\x -> x * x) range)
 
 solution :: Int -> Int
 solution = sumSquareDifference

@@ -18,16 +18,24 @@ import Problem4 (solution) as P4
 import Problem5 (solution) as P5
 import Problem6 (solution) as P6
 import Problem7 (solution) as P7
+import Problem8 (solution) as P8
+
+digits :: String
+digits =
+  "73167176531330624919225119679989574742355349194934969835203127745063262395783"
 
 
 main :: forall e. Eff (console :: CONSOLE, testOutput :: TESTOUTPUT, avar :: AVAR | e) Unit
 main = runTest do
+  test "problem 8" do
+    Assert.assert "The four adjacent digits that have the greatest product are 9 × 9 × 8 × 9 = 5832" $
+    (P8.solution 4 digits) == 5832
   test "problem 7" do
     Assert.assert "The sixth prime number is 13" $ (P7.solution 6) == 13
   test "problem 6" do
     Assert.assert "The Sum square difference of the first 10 natural numbers shoudld be 2640" $ (P6.solution 10) == 2640
   test "problem 5" do
-    Assert.assert "The smallest multiple of numbers from 1 to 10 should be 2520" $ (P5.solution 10) == 2520
+    Assert.assert "The smallest positive multiple of numbers from 1 to 10 should be 2520" $ (P5.solution 10) == 2520
   test "problem 4" do
     Assert.assert "The largest palindrome of the product of two 2-digits numbers should be 9009" $ (P4.solution 10) == 9009
   test "problem 3" do

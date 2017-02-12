@@ -1,14 +1,16 @@
-module Problem1 (
-  solution)
+module Problem1 (solution)
   where
 
 import Prelude
-import Data.List (range, filter)
+import Control.MonadZero (guard)
+import Data.Array ((..))
 import Data.Foldable (sum)
 
-multiples :: Int -> Int -> Int -> Boolean
-multiples m1 m2 x =
-  mod x m1 == 0 || mod x m2 == 0
+multiples :: Int -> Int
+multiples max = sum $ do
+  x <- 1 .. max
+  guard $ mod x 3 == 0 || mod x 5 == 0
+  pure $ x
 
 solution :: Int -> Int
-solution max = sum $ filter (multiples 3 5) (range 1 max)
+solution = multiples

@@ -8,7 +8,9 @@
   ],
   "dependencies": {
     "purescript-console": "^2.0.0",
-    "purescript-test-unit": "^10.1.0"
+    "purescript-test-unit": "^10.1.0",
+    "purescript-node-fs": "^3.0.0",
+    "purescript-stringutils": "^0.0.4"
   },
   "devDependencies": {
     "purescript-psci-support": "^2.0.0"
