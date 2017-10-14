@@ -29,7 +29,7 @@ main :: forall e. Eff (console :: CONSOLE, testOutput :: TESTOUTPUT, avar :: AVA
 main = runTest do
   test "problem 8" do
     Assert.assert "The four adjacent digits that have the greatest product are 9 × 9 × 8 × 9 = 5832" $
-    (P8.solution 4 digits) == 5832
+    (P8.solution 4 digits) == 5832.0
   test "problem 7" do
     Assert.assert "The sixth prime number is 13" $ (P7.solution 6) == 13
   test "problem 6" do
