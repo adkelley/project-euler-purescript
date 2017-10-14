@@ -20,11 +20,11 @@ import Problem7 (solution) as P7
 import Problem8 (solution) as P8
 
 
-readPE8File :: forall e. Eff (fs :: FS, err :: EXCEPTION | e) String
+readPE8File :: forall e. Eff (fs :: FS, exception :: EXCEPTION | e) String
 readPE8File = readTextFile UTF8 "./resources/pe8.txt"
 
 
-main :: forall e. Eff (fs :: FS, console :: CONSOLE | e) Unit
+main :: forall e. Eff (fs :: FS, exception :: EXCEPTION, console :: CONSOLE | e) Unit
 main = do
   digits <- either (const "0") id <$> try readPE8File
   log $ "Problem 8: " <> show (P8.solution 13 (stripChars "\n" digits))
